@@ -28,7 +28,7 @@ func (a *AliParser) Parse(content []byte, id int8) model.BookInfo {
 	main.Find(".ebook-main-wrapper").Each(func(i int, s *goquery.Selection) {
 		title := s.Find("h1").Text()                                                                  // 书名
 		author := s.Find(".author-name").Text()                                                       // 作者名
-		status := s.Find(".ebook-status").Text()                                                      // 状态（完结）
+		status := strings.TrimPrefix(s.Find(".ebook-status").Text(), "状态：")                           // 状态（完结）
 		publishTime := strings.TrimSpace(strings.TrimPrefix(s.Find(".publish-time").Text(), "发布时间：")) // 发布时间（2022-01-12）
 		chapterNum := strings.TrimSpace(strings.TrimPrefix(s.Find(".chapter-num").Text(), "章节数："))    // 章节数（16）
 		score, _ := strconv.ParseFloat(s.Find(".score-num").Text(), 64)
