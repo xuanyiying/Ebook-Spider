@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	parser.Parse()
+	parser.Run()
 	syscall.Exit(0)
 }

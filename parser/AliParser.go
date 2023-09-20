@@ -1,6 +1,7 @@
 package parser
 
 import (
+	"ebook-spider/consts"
 	"ebook-spider/fetcher"
 	"ebook-spider/logger"
 	"ebook-spider/model"
@@ -23,7 +24,7 @@ func (a *AliParser) Parse(content []byte, id int8) model.BookInfo {
 	}
 	var r model.BookInfo
 	main := doc.Find(".ebook-wrapper")
-
+	// 书籍信息
 	main.Find(".ebook-main-wrapper").Each(func(i int, s *goquery.Selection) {
 		title := s.Find("h1").Text()                                                                  // 书名
 		author := s.Find(".author-name").Text()                                                       // 作者名
@@ -45,6 +46,7 @@ func (a *AliParser) Parse(content []byte, id int8) model.BookInfo {
 		r = b
 		return
 	})
+	// 图片
 	attr, exists := main.Find(".ebook-cover-img").Attr("src")
 	if exists {
 		r.ImgUrl = attr
@@ -55,19 +57,10 @@ func (a *AliParser) Parse(content []byte, id int8) model.BookInfo {
 	return r
 }
 
-func Parse() {
-	url := "https://developer.aliyun.com/ebook/%d"
+func Run() {
 	var books []model.BookInfo
-	for i := 8046; i < 8051; i++ {
-		uri := fmt.Sprintf(url, i)
-		logger.Info("url", uri)
-		bytes, err := fetcher.Fetch(uri)
-		if err != nil {
-			logger.Error("错误url:", uri, err)
-		}
-		a := AliParser{}
-		book := a.Parse(bytes, int8(i))
-		books = append(books, book)
+	for i := 1; i < 8051; i++ {
+		books = parse(i, books)
 	}
 	s := store.CsvStore{}
 	b, err := s.Store(books)
@@ -75,4 +68,17 @@ func Parse() {
 		logger.Error("写入csv错误:", err)
 	}
 	logger.Info(fmt.Sprintf("成功写入csv:%d 条书籍信息", len(books)))
+}
+
+func parse(i int, books []model.BookInfo) []model.BookInfo {
+	uri := fmt.Sprintf(consts.AliyunUrl, i)
+	logger.Info("url", uri)
+	bytes, err := fetcher.Fetch(uri)
+	if err != nil {
+		logger.Error("错误url:", uri, err)
+	}
+	a := AliParser{}
+	book := a.Parse(bytes, int8(i))
+	books = append(books, book)
+	return books
 }
