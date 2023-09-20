@@ -1,0 +1,1247 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="data-spm" content="a2c6h" />
+    <title>2021云上架构与运维峰会演讲合集-藏经阁-阿里云开发者社区</title>
+
+    <meta name="keywords" content="开发者，阿里云，云计算、云原生、开源" />
+    <meta name="description" content="阿里云开发者社区覆盖云计算、物联网、大数据、云原生、数据库、人工智能、微服务、安全、开发、运维等技术领域，集合阿里巴巴经济体各个单元技术优势，提供分享、交流、学习、认证、工具、资源、大赛、活动、社群、创业一站式服务能力，满足开发者全生命周期成长需求。" />
+
+    <meta property="og:title" content="2021云上架构与运维峰会演讲合集-藏经阁-阿里云开发者社区" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="阿里云开发者社区覆盖云计算、物联网、大数据、云原生、数据库、人工智能、微服务、安全、开发、运维等技术领域，集合阿里巴巴经济体各个单元技术优势，提供分享、交流、学习、认证、工具、资源、大赛、活动、社群、创业一站式服务能力，满足开发者全生命周期成长需求。" />
+    <meta property="og:image" content="https://img.alicdn.com/tfs/TB1LCE1aQ5E3KVjSZFCXXbuzXXa-200-200.png" />
+    <meta property="og:url" content="https://developer.aliyun.com/ebook/1" />
+    <link rel="canonical" href="https://developer.aliyun.com/ebook/1" />
+
+    <link rel="stylesheet" href="//g.alicdn.com/developer_center/devcloud-aliyun-com-fe/0.8.26/css/ebookDetail.css" />
+    <link rel="stylesheet" href="//oneconsole.alicdn.com/sitemap/css/seo_ebook_article.css" />
+
+
+    <meta name="nav-config" content="footer=default" />
+    <link rel="shortcut icon" href="//img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://g.alicdn.com/code/npm/@ali??hmod-ace-2023-box/0.1.0/index.css,hmod-ace-2023-developer-global-community-nav/0.0.37/index.css,hmod-ace-2023-developer-global-feedback/0.0.4/index.css,hmod-aliyun-com-global-nav-search/0.0.19/index.css,hmod-aliyun-com-global-nav/0.0.25/index.css" />
+
+
+    <link rel="stylesheet" href="//g.alicdn.com/aliyun/nav-loader/css/index.css" />
+    <script src="//g.alicdn.com/aliyun/nav-loader/js/index.js" nonce="7f80fa0aafc44113b8cfbb31c71a6195"></script>
+
+    <script nonce="7f80fa0aafc44113b8cfbb31c71a6195">
+        var GLOBAL_CONFIG = {
+            "uccCsrfToken": null,
+            "eBookId": 1,
+            "isLogin": false,
+            "isMark": false,
+            "content": null,
+            "score": null,
+            "favoriteBizCategory": 'ebook',
+            "favoriteObjectId": '1',
+            "csrf_key": 'p_csrf',
+            "csrf_val": '82c431ed-2ce0-4e2b-8420-e25d2ae0390b',
+            "creatorUccId": '3sx6y45vmkaq2',
+            "actionBizCategory": 'ebook',
+            "community": {'admins':'1796926142754763','belongTab':null,'description':'\u4E91\u670D\u52A1\u5668ECS\u662F\u4E00\u79CD\u5B89\u5168\u53EF\u9760\u3001\u5F39\u6027\u53EF\u4F38\u7F29\u7684IaaS\u7EA7\u4E91\u8BA1\u7B97\u670D\u52A1\u3002\u5728\u8FD9\u91CC\u4F60\u53EF\u4EE5\u83B7\u53D6\u6700\u65B0\u7684ECS\u4EA7\u54C1\u8D44\u8BAF\u3001\u6700\u524D\u6CBF\u7684\u6280\u672F\u4EA4\u6D41\u4EE5\u53CA\u4F18\u60E0\u6D3B\u52A8\u7B49\u4FE1\u606F\uFF0C\u52A0\u901F\u81EA\u5DF1\u7684\u6280\u672F\u6210\u957F\u3002','domainCode':'ecs','domainName':'\u4E91\u670D\u52A1\u5668ECS','exCommunity':{'communityCode':'ecs','description':'\u4E91\u670D\u52A1\u5668\uFF08Elastic Compute Service\uFF0C\u7B80\u79F0 ECS\uFF09\u662F\u4E00\u79CD\u7B80\u5355\u9AD8\u6548\u3001\u5904\u7406\u80FD\u529B\u53EF\u5F39\u6027\u4F38\u7F29\u7684\u8BA1\u7B97\u670D\u52A1\uFF0C\u53EF\u5FEB\u901F\u6784\u5EFA\u66F4\u7A33\u5B9A\u3001\u5B89\u5168\u7684\u5E94\u7528\uFF0C\u63D0\u5347\u8FD0\u7EF4\u6548\u7387\uFF0C\u964D\u4F4E IT \u6210\u672C\u3002','domainList':null,'gmtCreate':'2023-05-29 21:45:43','gmtModified':'2023-07-06 19:28:14','id':16,'logoUrl':'https://ucc.alicdn.com/pic/developer-ecology/gcqh4k5p7hqhi_c679c1bfbd124f7fbfcb053768d71e56.png','name':'\u5F39\u6027\u8BA1\u7B97','relatedCloudProductTags':[{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-faas','tagLevel':3,'tagName':'FPGA\u4E91\u670D\u52A1\u5668'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-scc','tagLevel':3,'tagName':'\u8D85\u7EA7\u8BA1\u7B97\u96C6\u7FA4'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ecsgpu','tagLevel':3,'tagName':'GPU\u4E91\u670D\u52A1\u5668'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-cloudbox','tagLevel':3,'tagName':'\u4E91\u76D2'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ddh','tagLevel':3,'tagName':'\u4E13\u6709\u5BBF\u4E3B\u673A'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-vmwaresrv','tagLevel':3,'tagName':'VMware\u670D\u52A1'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-eci','tagLevel':3,'tagName':'\u5F39\u6027\u5BB9\u5668\u5B9E\u4F8B'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-swas','tagLevel':3,'tagName':'\u8F7B\u91CF\u5E94\u7528\u670D\u52A1\u5668'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ess','tagLevel':3,'tagName':'\u5F39\u6027\u4F38\u7F29'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-disk','tagLevel':3,'tagName':'\u5757\u5B58\u50A8'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-gws','tagLevel':3,'tagName':'\u65E0\u5F71\u4E91\u7535\u8111'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-batchcompute','tagLevel':3,'tagName':'\u6279\u91CF\u8BA1\u7B97'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ehpc','tagLevel':3,'tagName':'\u5F39\u6027\u9AD8\u6027\u80FD\u8BA1\u7B97'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-fc','tagLevel':3,'tagName':'\u51FD\u6570\u8BA1\u7B97'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-hpc','tagLevel':3,'tagName':'\u9AD8\u6027\u80FD\u8BA1\u7B97 HPC'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-xdragon','tagLevel':3,'tagName':'\u5F39\u6027\u88F8\u91D1\u5C5E\u670D\u52A1\u5668'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ecs','tagLevel':3,'tagName':'\u4E91\u670D\u52A1\u5668 ECS'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ros','tagLevel':3,'tagName':'\u8D44\u6E90\u7F16\u6392'}]},'exCommunityCode':'ecs','exCommunityId':16,'gmtCreate':'2023-05-29 21:45:43','gmtModified':'2023-06-12 17:06:09','id':41,'isFromGroup':true,'orderWeight':0,'qaProductId':0,'relatedCloudProductTags':[{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ecs','tagLevel':3,'tagName':'\u4E91\u670D\u52A1\u5668 ECS'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-swas','tagLevel':3,'tagName':'\u8F7B\u91CF\u5E94\u7528\u670D\u52A1\u5668'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ecsgpu','tagLevel':3,'tagName':'GPU\u4E91\u670D\u52A1\u5668'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-eci','tagLevel':3,'tagName':'\u5F39\u6027\u5BB9\u5668\u5B9E\u4F8B'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-cloudbox','tagLevel':3,'tagName':'\u4E91\u76D2'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ess','tagLevel':3,'tagName':'\u5F39\u6027\u4F38\u7F29'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-xdragon','tagLevel':3,'tagName':'\u5F39\u6027\u88F8\u91D1\u5C5E\u670D\u52A1\u5668'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-batchcompute','tagLevel':3,'tagName':'\u6279\u91CF\u8BA1\u7B97'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-fc','tagLevel':3,'tagName':'\u51FD\u6570\u8BA1\u7B97'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ros','tagLevel':3,'tagName':'\u8D44\u6E90\u7F16\u6392'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ehpc','tagLevel':3,'tagName':'\u5F39\u6027\u9AD8\u6027\u80FD\u8BA1\u7B97'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-scc','tagLevel':3,'tagName':'\u8D85\u7EA7\u8BA1\u7B97\u96C6\u7FA4'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-ddh','tagLevel':3,'tagName':'\u4E13\u6709\u5BBF\u4E3B\u673A'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-gws','tagLevel':3,'tagName':'\u65E0\u5F71\u4E91\u7535\u8111'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-hpc','tagLevel':3,'tagName':'\u9AD8\u6027\u80FD\u8BA1\u7B97 HPC'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-vmwaresrv','tagLevel':3,'tagName':'VMware\u670D\u52A1'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-faas','tagLevel':3,'tagName':'FPGA\u4E91\u670D\u52A1\u5668'},{'children':null,'tagBizCategory':null,'tagCode':'de-product-3-disk','tagLevel':3,'tagName':'\u5757\u5B58\u50A8'}]},
+            "communityCode" : 'ecs'
+        };
+    </script>
+</head>
+<body data-spm="26392459"><script type="text/javascript"
+                                  id="beacon-aplus"
+                                  src="//g.alicdn.com/alilog/mlog/aplus_v2.js"
+                                  exparams="category=&userid=&aplus&yunid=&yunpk=&channel=&cps="
+                                  nonce="7f80fa0aafc44113b8cfbb31c71a6195"
+                                  cspx="7f80fa0aafc44113b8cfbb31c71a6195"
+                                  async>
+</script>
+
+
+<script nonce="7f80fa0aafc44113b8cfbb31c71a6195">
+    /*<![CDATA[*/
+    !(function(c,b,d,a){c[a]||(c[a]={});c[a].config= {
+        pid: "hl0znr436e@8b95b85ff013e64",
+        appType: "web",
+        imgUrl: "https://arms-retcode.aliyuncs.com/r.png?",
+        sendResource: true,
+        enableLinkTrace: true,
+        behavior: true,
+        enableConsole: true,
+        environment: (function getEnv(){
+            return document.location.hostname === 'developer.aliyun.com' ? 'prod' : 'local';
+        })(),
+        uid: (function getUID() {
+            var pk = document.cookie.match(/login_aliyunid_pk=(.*?);/);
+            var cna = document.cookie.match(/cna=(.*?);/);
+            return pk && pk.length === 2 ? pk[1] : cna && cna.length === 2 ? cna[1] : "";
+        })()
+    };with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
+    })(window,document,"https://retcode.alicdn.com/retcode/bl.js","__bl");
+    /*]]>*/
+</script>
+
+<div id="004afe5213fdc1a98b96333bfaf650ba"><div class="aliyun-com-global-nav"><div class="global-nav-container-top"><div class="aliyun-topbar-element aliyun-logo header-container-left"><a href="https://www.aliyun.com/" class="aliyun-logo-link"><img class="aliyun-logo-image light" src="https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png"></a></div><div class="global-search-wrap"><div class="global-search-container"><div class="global-search-container-wrap "><div class="global-search-container-inner"><input type="text" data-placeholder="搜索社区内容" placeholder="搜索社区内容" data-tracker-container="topbar_search_input_focus"><div class="__search-box-icon"><i class="navIconfont icon-topnavsearch1" data-tracker-container="topbar_search_button_click"></i></div></div></div></div><div class="global-search-mobole-container"></div></div><div class="aliyun-topbar-element aliyun-diff-intro"><div class="common-menu-wrap"><div class="common-menu"><div class="common-menu-inner"><div class="scroll-left-arrow"><i class="navIconfont icon-topnavbutton_left"></i></div><div class="scroll-right-arrow"><i class="navIconfont icon-topnavbutton_right"></i></div><div class="common-menu-scroll-bar"><div class="common-menu-scroll-bar-inner"><div class="common-menu-scroll-bar-mask"></div><a class="global-menu-item" href="https://www.aliyun.com/product/list" target="_self"><span>产品</span><i class="navIconfont icon-topnavput_away"></i></a><a class="global-menu-item" href="javascript:;" target="_self"><span>解决方案</span><i class="navIconfont icon-topnavput_away"></i></a><a class="global-menu-item" href="https://help.aliyun.com/" target="_self"><span>文档与社区</span><i class="navIconfont icon-topnavput_away"></i></a><a class="global-menu-item" href="https://free.aliyun.com/" target="_self"><span>免费试用</span><i class="navIconfont icon-topnavput_away"></i></a><a class="global-menu-item" href="https://www.aliyun.com/price" target="_self"><span>定价</span><i class="navIconfont icon-topnavput_away"></i></a><a class="global-menu-item" href="https://market.aliyun.com/" target="_self"><span>云市场</span><i class="navIconfont icon-topnavput_away"></i></a><a class="global-menu-item" href="https://partner.aliyun.com/management/v2" target="_self"><span>合作伙伴</span><i class="navIconfont icon-topnavput_away"></i></a><a class="global-menu-item" href="https://www.aliyun.com/service" target="_self"><span>支持与服务</span><i class="navIconfont icon-topnavput_away"></i></a><a class="global-menu-item" href="https://www.aliyun.com/about" target="_self"><span>了解阿里云</span><i class="navIconfont icon-topnavput_away"></i></a></div></div></div></div><div class="common-topbar-dropdown"></div></div></div></div><div class="aliyun-topbar-element aliyun-topbar-element-right"><div class="ability-element aliyun-language "><div class="aliyun-language-pointer"><div class="aliyun-language-text"><i class="navIconfont icon-topnavintl"></i></div></div></div><div class="ability-element contact-us"><div class="contact-us-pointer"><span class="contact-us-text"><i class="navIconfont icon-topnavcontact"></i></span></div></div><a class="ability-element" target="_blank" href="//beian.aliyun.com/">备案</a><a class="ability-element console-link" target="_blank" href="//home.console.aliyun.com/" rel="nofollow">控制台</a><a class="ability-element aliyun-register" href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fwww.aliyun.com%2F" rel="nofollow">登录/注册</a></div></div><div class="aliyun-com-mobile-global-nav"></div><div class="_18a32969382a277c44015217fbc5cb5a_box"><div class="ace-developer-new-global-community-nav"><div class="ace-developer-new-global-sub-community-nav-box" id="ace-developer-new-global-sub-community-nav-box"><div class="global-sub-community-nav-pc"><div class="fixed-container"><div class="global-sub-community-nav"><div class="global-sub-community-nav-left" id="global-sub-community-nav-left"><div class="global-sub-community-nav-left-main"><div class="aliyun-sub-community-logo"><a target="_blank" class="aliyun-sub-community-link" href="/ecs/"><img class="aliyun-sub-community-image" src="https://ucc.alicdn.com/pic/developer-ecology/uraczcr3n6fzy_c8c0f137385d4b178be5b2daafabbcc5.png" alt="弹性计算"></a></div><div class="global-sub-community-nav-menu"><div class="global-sub-community-nav-menu-box"><div class="global-sub-community-menu-list"><a target="_blank" class="menu" href="/ecs/" title="弹性计算">首页</a><a target="_blank" class="menu" href="https://developer.aliyun.com/group/ecs/">云服务器ECS</a><a target="_blank" class="menu" href="https://free.aliyun.com/?product=9555927">免费试用</a><a target="_blank" class="menu" href="https://developer.aliyun.com/topic/ecs-cloudops">CloudOps云上运维系列课程</a><a target="_blank" class="menu" href="https://developer.aliyun.com/topic/ecs-yitian">倚天实例迁移课程</a></div></div></div></div></div></div></div></div><div class="global-sub-community-nav-mobile"></div></div></div><div class="community-global-guide-2023"></div><div class="community-feedback-2023"></div></div></div>
+
+<div id="ebook-detail" data-spm="ebook-detail">
+
+    <div class="developer-nav">
+        <a class="nav-item" target="_blank" href="/">开发者社区</a>
+        <span>></span>
+        <a class="nav-item" target="_blank" href="/ecs">弹性计算</a>
+        <span>></span>
+        <a class="nav-item" target="_blank" href="/group/ecs/">云服务器ECS</a>
+        <span>></span>
+        <a class="nav-item">正文</a>
+    </div>
+
+    <div class="ebook-detail-main">
+        <div class="ebook-bottom-wrapper">
+            <div class="ebook-left-wrapper">
+                <div class="ebook-wrapper">
+                    <div class="ebook-cover-img-wrapper">
+                        <img class="ebook-cover-img" src="https://ucc.alicdn.com/pic/developer-ecology/a55841009a784d84a42968d29f226281.png?x-oss-process=image/resize,h_600" />
+                        <div class="ebook-home-recommend-mask"></div>
+                    </div>
+                    <div class="ebook-main-wrapper">
+                        <div class="ebook-name-wrapper">
+                            <h1 class="ebook-name">2021云上架构与运维峰会演讲合集</h1>
+
+
+                        </div>
+                        <div class="tag-wrapper">
+                            <div class="num-item view-num">105386</div>
+                            <div class="num-item download-num">1836</div>
+                        </div>
+                        <div class="author-wrapper">
+                            作者：
+                            <span class="author-name">藏经阁小助手</span>
+                        </div>
+                        <div class="ebook-status-ip">
+                            <div class="ebook-status">状态：完结</div>
+                            <span class="personal-ip"></span>
+                        </div>
+                        <div class="ebook-status-h5">状态：完结</div>
+
+                        <div class="tag-num-wrapper">
+                            <div class="num-wrapper publish-time">发布时间：2022-01-12</div>
+                            <div class="num-wrapper chapter-num">章节数：16</div>
+
+                        </div>
+                        <div class="score-action">
+                            <span class="score-num">9.7</span>
+                            <div class="ebook-home-stars">
+                                <div class="ebook-def-star">
+                                    <div class="ebook-cur-star" style="width: 97.0%;"></div>
+                                </div>
+                            </div>
+                            <span class="score-person-num">（48人评分）</span>
+                            <span class="go-score">评价这本书</span>
+                        </div>
+                        <div class="btn-wrapper">
+                            <div id="action-btns" class="action-btns"></div>
+                            <a class="btn color-btn ebook-btn-download" target="_blank" href="/ebook/download/1">
+                                <img class="fav-btn" src="https://img.alicdn.com/imgextra/i4/O1CN01ZJuhgw1l4PypAgXVe_!!6000000004765-2-tps-32-34.png" />
+                                点击下载
+                            </a>
+                            <a class="btn color-btn ebook-btn-read" target="_blank" href="/ebook/1/777">
+                                <img class="read-btn" src="https://img.alicdn.com/imgextra/i4/O1CN01MlzVLx1GR5Uj7JiNq_!!6000000000618-2-tps-36-28.png" />
+                                在线阅读
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ebook-detail-info">
+
+                    <div class="info-item">
+                        <div class="info-num">105386次</div>
+                        <div class="info-text">在线阅读</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-num">1836次</div>
+                        <div class="info-text">下载</div>
+                    </div>
+                </div>
+                <div class="community-product"></div>
+                <div class="free-product" data-spm="d-1"></div>
+                <div class="left-item ebook-desc">
+                    <div class="left-item-title">技术作品介绍</div>
+                    <p class="ebook-desc-text">《2021云上架构与运维峰会演讲合集》通过阿里云技术大咖分享云时代架构与研发运维趋势，任意门、大搜车、饿了么等优秀企业分享云上架构演进与运维最佳实践和圆桌论坛，资深技术从业人员共探行业发展前景等方面进行分析和探讨，将 2021 云上架构与运维峰会中的技术干货沉淀下来，以飨读者。</p>
+                </div>
+                <div class="left-item ebook-author-wrapper">
+                    <div class="left-item-title">作者信息</div>
+                    <div class="author-box">
+                        <div class="swiper-container swiper-author-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="author-slide-wrapper hide-line">
+                                        <div class="author-left-wrapper">
+
+
+                                            <span target="_blank" class="author-name">藏经阁小助手</span>
+                                        </div>
+                                        <div class="author-desc"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-author-pagination"></div>
+                    </div>
+                </div>
+                <div class="left-item group-h5">
+                    <div class="left-item-title">来源圈子</div>
+                    <div class="right-item-box group-box">
+                        <div class="group-content">
+                            <div class="group-box-left">
+                                <div class="group-box-left-info">
+                                    <a target="_blank" class="group-box-left-info-img-link" href="/group/ecs">
+                                        <img class="group-box-left-info-img" src="https://ucc.alicdn.com/pic/developer-ecology/deb854392bbf476e9954070829470859.png" />
+                                    </a>
+                                    <a target="_blank" class="group-box-left-info-title" href="/group/ecs">云服务器ECS</a>
+                                    <div class="group-box-left-info-member">418191</div>
+                                </div>
+                                <div class="group-box-left-desc"></div>
+                            </div>
+                            <div class="group-box-right">
+                                <div data-group-code="ecs" data-join="false" class="group-join-btn">+ 订阅</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-item ebook-review-wrapper">
+                    <div class="left-item-title">热门书评</div>
+                    <div class="review-content-wrapper">
+                        <div class="review-content" data-uccid="djxaooefa2otc" data-objectid="1257303307827795721">
+                            <div class="review-content-img-wrapper">
+                                <div class="author-img-wrapper">
+                                    <a class="author-img-box" target="_blank" href="/profile/expert/djxaooefa2otc">
+                                        <img class="author-img" alt="" src="https://ucc.alicdn.com/avatar/avatar3.jpg" />
+                                    </a>
+                                    <!--                    <img class="author-tip-img" alt=""-->
+                                    <!--                         src="https://ucc.alicdn.com/pic/ucc-admin/4c31495eb5904b729ac6f0d6b52f8eb3.png"/>-->
+                                </div>
+                                <div class="review-content-msg-wrapper">
+                                    <a class="review-content-author-wrapper" target="_blank" href="/profile/expert/djxaooefa2otc">Skyund</a>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 100%;"></div>
+                                        </div>
+                                        <!--                      <div class="ebook-star-count" th:text="${(mark.avgScore eq 0 or mark.avgScore eq null)?'暂无评分':mark.avgScore}">3.5</div>-->
+                                    </div>
+                                    <span class="review-time-wrapper">2023-07-24 17:57:14</span>
+                                    <div class="respond-ip"></div>
+                                </div>
+                            </div>
+                            <div class="review-content-main-wrapper">
+                                <div class="review-content-text">写的不错，继续支持</div>
+                            </div>
+                        </div>
+                        <div class="review-content" data-uccid="jnvwppvhiny2k" data-objectid="1079571175408921323">
+                            <div class="review-content-img-wrapper">
+                                <div class="author-img-wrapper">
+                                    <a class="author-img-box" target="_blank" href="/profile/expert/jnvwppvhiny2k">
+                                        <img class="author-img" alt="" src="https://ucc.alicdn.com/avatar/6a93da16e72c493d8b903f4aad993c94.jpg" />
+                                    </a>
+                                    <!--                    <img class="author-tip-img" alt=""-->
+                                    <!--                         src="https://ucc.alicdn.com/pic/ucc-admin/4c31495eb5904b729ac6f0d6b52f8eb3.png"/>-->
+                                </div>
+                                <div class="review-content-msg-wrapper">
+                                    <a class="review-content-author-wrapper" target="_blank" href="/profile/expert/jnvwppvhiny2k">代码bug生产队</a>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 100%;"></div>
+                                        </div>
+                                        <!--                      <div class="ebook-star-count" th:text="${(mark.avgScore eq 0 or mark.avgScore eq null)?'暂无评分':mark.avgScore}">3.5</div>-->
+                                    </div>
+                                    <span class="review-time-wrapper">2022-11-21 12:35:13</span>
+                                    <div class="respond-ip"></div>
+                                </div>
+                            </div>
+                            <div class="review-content-main-wrapper">
+                                <div class="review-content-text">66666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666</div>
+                            </div>
+                        </div>
+                        <div class="review-content" data-uccid="cannypbjt4iyc" data-objectid="1073021829045548072">
+                            <div class="review-content-img-wrapper">
+                                <div class="author-img-wrapper">
+                                    <a class="author-img-box" target="_blank" href="/profile/expert/cannypbjt4iyc">
+                                        <img class="author-img" alt="" src="https://ucc.alicdn.com/avatar/25e88cc9ae8c4691a35440f1d9ec91d8.jpg" />
+                                    </a>
+                                    <!--                    <img class="author-tip-img" alt=""-->
+                                    <!--                         src="https://ucc.alicdn.com/pic/ucc-admin/4c31495eb5904b729ac6f0d6b52f8eb3.png"/>-->
+                                </div>
+                                <div class="review-content-msg-wrapper">
+                                    <a class="review-content-author-wrapper" target="_blank" href="/profile/expert/cannypbjt4iyc">小周sir</a>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 100%;"></div>
+                                        </div>
+                                        <!--                      <div class="ebook-star-count" th:text="${(mark.avgScore eq 0 or mark.avgScore eq null)?'暂无评分':mark.avgScore}">3.5</div>-->
+                                    </div>
+                                    <span class="review-time-wrapper">2022-11-12 11:42:50</span>
+                                    <div class="respond-ip"></div>
+                                </div>
+                            </div>
+                            <div class="review-content-main-wrapper">
+                                <div class="review-content-text">6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666</div>
+                            </div>
+                        </div>
+                        <div class="review-content" data-uccid="6nksukodb7kyc" data-objectid="1039724902715738590">
+                            <div class="review-content-img-wrapper">
+                                <div class="author-img-wrapper">
+                                    <a class="author-img-box" target="_blank" href="/profile/expert/6nksukodb7kyc">
+                                        <img class="author-img" alt="" src="https://ucc.alicdn.com/avatar/ae1ea495240245558622eccae43d4dd9.jpg" />
+                                    </a>
+                                    <!--                    <img class="author-tip-img" alt=""-->
+                                    <!--                         src="https://ucc.alicdn.com/pic/ucc-admin/4c31495eb5904b729ac6f0d6b52f8eb3.png"/>-->
+                                </div>
+                                <div class="review-content-msg-wrapper">
+                                    <a class="review-content-author-wrapper" target="_blank" href="/profile/expert/6nksukodb7kyc">唐家四少官微</a>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 100%;"></div>
+                                        </div>
+                                        <!--                      <div class="ebook-star-count" th:text="${(mark.avgScore eq 0 or mark.avgScore eq null)?'暂无评分':mark.avgScore}">3.5</div>-->
+                                    </div>
+                                    <span class="review-time-wrapper">2022-09-27 13:07:47</span>
+                                    <div class="respond-ip"></div>
+                                </div>
+                            </div>
+                            <div class="review-content-main-wrapper">
+                                <div class="review-content-text">圆桌论坛干货十足鸭！</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ebook-review-page"></div>
+                </div>
+                <div class="left-item ebook-relate-wrapper" data-tracker-container="developer_ebook_related_ebook">
+                    <div class="left-item-title">相关技术作品</div>
+                    <div class="relate-book-wrapper">
+                        <div class="swiper-container swiper-ebook-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/y2qosi2vq5yd6_ccdb65c1e29c4aad8e7f0dd609771013.png?x-oss-process=image/resize,h_300"/>
+                                    <div class="ebook-right-content-wrapper">
+                                        <a target="_blank" class="ebook-right-title"  data-tracker-scm="20140722.ID_community@@ebook@@8002._.ID_community@@ebook@@8002-OR_rec-V_1-RL_community@@ebook@@1" href="https://developer.aliyun.com/ebook/8002">阿里云卓越架构白皮书_导读版</a>
+                                        <div class="score-action">
+                                            <div class="ebook-home-stars">
+                                                <div class="ebook-def-star">
+                                                    <div class="ebook-cur-star" style="width: 96.0%;"></div>
+                                                </div>
+                                            </div>
+                                            <span class="score-num">
+                                                                    9.6
+                                                            </span>
+                                        </div>
+                                        <div class="ebook-desc" >阿里云卓越架构白皮书基于过去服务客户的经验和总结，将对应领域的Know-How转化为体系化的方法论和指导原则，指导客户在阿里云上构建更加安全、高效、稳定的云架构，并为后续的解决方案和产品化落地提供指引。</div>
+                                        <div class="tag-wrapper">
+                                            <div class="num-item view-num" >68621</div>
+                                            <div class="num-item download-num">822</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/pawmkwdq37c7s_a117d77b11614770aa4dfacf8387ac3f.jpg?x-oss-process=image/resize,h_300"/>
+                                    <div class="ebook-right-content-wrapper">
+                                        <a target="_blank" class="ebook-right-title"  data-tracker-scm="20140722.ID_community@@ebook@@7979._.ID_community@@ebook@@7979-OR_rec-V_1-RL_community@@ebook@@1" href="https://developer.aliyun.com/ebook/7979">微服务×容器Meetup：云原生架构与应用专场PPT合辑</a>
+                                        <div class="score-action">
+                                            <div class="ebook-home-stars">
+                                                <div class="ebook-def-star">
+                                                    <div class="ebook-cur-star" style="width: 100.0%;"></div>
+                                                </div>
+                                            </div>
+                                            <span class="score-num">
+                                                                    10.0
+                                                            </span>
+                                        </div>
+                                        <div class="ebook-desc" >微服务 x 容器开源开发者 Meetup 是由阿里云云原生应用平台打造的，面向一线开发者的技术交流活动，整体聚焦容器 & 微服务方向，旨在通过热门的开源技术、云原生在企业的应用实践案例、架构设计思维等，帮助开发者学习云原生技术、交流实践中的问题和痛点，推进云原生技术和架构的规模化应用落地进程。</div>
+                                        <div class="tag-wrapper">
+                                            <div class="num-item view-num" >185</div>
+                                            <div class="num-item download-num">229</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/yv4fyi5kqohs2_9fdd3adc1f814222955a85c30110e0ef.png?x-oss-process=image/resize,h_300"/>
+                                    <div class="ebook-right-content-wrapper">
+                                        <a target="_blank" class="ebook-right-title"  data-tracker-scm="20140722.ID_community@@ebook@@7898._.ID_community@@ebook@@7898-OR_rec-V_1-RL_community@@ebook@@1" href="https://developer.aliyun.com/ebook/7898">云原生架构容器&微服务优秀案例集</a>
+                                        <div class="score-action">
+                                            <div class="ebook-home-stars">
+                                                <div class="ebook-def-star">
+                                                    <div class="ebook-cur-star" style="width: 98.0%;"></div>
+                                                </div>
+                                            </div>
+                                            <span class="score-num">
+                                                                    9.8
+                                                            </span>
+                                        </div>
+                                        <div class="ebook-desc" >云原生架构，特别是容器与微服务技术领域已成为下一代技术演进的必经之路，同时也是各行各业快捷上云、高效用云最合适的架构选择。本案例集是相关客户通过阿里云云原生产品构建生产业务体系的经验分享及最佳实践总结，为您构建生产可用的云原生架构提供相应成功案例参考，希望帮助您轻松实现云原生架构转型，助力业务腾飞! </div>
+                                        <div class="tag-wrapper">
+                                            <div class="num-item view-num" >59435</div>
+                                            <div class="num-item download-num">2779</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/bzpnbsacwfn64_837a8ab8b06c42ed8bb47ede7341a327.png?x-oss-process=image/resize,h_300"/>
+                                    <div class="ebook-right-content-wrapper">
+                                        <a target="_blank" class="ebook-right-title"  data-tracker-scm="20140722.ID_community@@ebook@@7891._.ID_community@@ebook@@7891-OR_rec-V_1-RL_community@@ebook@@1" href="https://developer.aliyun.com/ebook/7891">以银行架构视角解读和落实银行数字化转型的两份重磅指导文件</a>
+                                        <div class="score-action">
+                                            <div class="ebook-home-stars">
+                                                <div class="ebook-def-star">
+                                                    <div class="ebook-cur-star" style="width: 95.0%;"></div>
+                                                </div>
+                                            </div>
+                                            <span class="score-num">
+                                                                    9.5
+                                                            </span>
+                                        </div>
+                                        <div class="ebook-desc" >就银行行业而言，数字化和金融科技先后经历了电子化、网络化等阶段，持续发展到今天的过程中有哪些困惑成就？我们尝试用应对和管理复杂性的最基本武器，从抽象、分层分域和演化的架构思维入手，不仅“读”也提出“解”。从“解读”到“解构”。面对两份《文件》的整体性，对内容进行横向关联、整合、解构，形成一套从“战略转型”、到“架构转型”、再到“业务、数据、技术、组织转型”的逐层分解转型策略。</div>
+                                        <div class="tag-wrapper">
+                                            <div class="num-item view-num" >32439</div>
+                                            <div class="num-item download-num">326</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/a65c4636a90e42828af85480e844b8aa.png?x-oss-process=image/resize,h_300"/>
+                                    <div class="ebook-right-content-wrapper">
+                                        <a target="_blank" class="ebook-right-title"  data-tracker-scm="20140722.ID_community@@ebook@@7817._.ID_community@@ebook@@7817-OR_rec-V_1-RL_community@@ebook@@1" href="https://developer.aliyun.com/ebook/7817">基于英特尔®架构的阿里云服务网格ASM技术加速应用服务加密通</a>
+                                        <div class="score-action">
+                                            <div class="ebook-home-stars">
+                                                <div class="ebook-def-star">
+                                                    <div class="ebook-cur-star" style="width: 99.0%;"></div>
+                                                </div>
+                                            </div>
+                                            <span class="score-num">
+                                                                    9.9
+                                                            </span>
+                                        </div>
+                                        <div class="ebook-desc" >微服务架构的发展带来了诸多优势，然而这些分布众多的微服务也会增加安全性方面的挑战，每个微服务都是一个可被攻击的目标。为了提升网络通信的安全防护能力，有效对抗网络威胁，采用微服务架构的服务网格普遍采用了基于安全传输层协议(TLS)的安全数据传输。但同时，TLS协议中的非对称加解密会消耗大量的CPU资源，影响了服务网格的性能表现，并带来了较高的总体拥有成本(TCO)。</div>
+                                        <div class="tag-wrapper">
+                                            <div class="num-item view-num" >22179</div>
+                                            <div class="num-item download-num">132</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/251ae35fa6024e5eb3c07dfb0a129d14.png?x-oss-process=image/resize,h_300"/>
+                                    <div class="ebook-right-content-wrapper">
+                                        <a target="_blank" class="ebook-right-title"  data-tracker-scm="20140722.ID_community@@ebook@@7744._.ID_community@@ebook@@7744-OR_rec-V_1-RL_community@@ebook@@1" href="https://developer.aliyun.com/ebook/7744">技术揭秘：RocketMQ 5.0 云原生架构升级之路</a>
+                                        <div class="score-action">
+                                            <div class="ebook-home-stars">
+                                                <div class="ebook-def-star">
+                                                    <div class="ebook-cur-star" style="width: 100.0%;"></div>
+                                                </div>
+                                            </div>
+                                            <span class="score-num">
+                                                                    10.0
+                                                            </span>
+                                        </div>
+                                        <div class="ebook-desc" >RocketMQ诞生于阿里巴巴电商核心系统，历经十余年大规模流量场景的持续打磨验证，成为国内企业和开发者社区广泛应用和受欢迎的消息中间件。伴随云原生理念的深入人心，RocketMQ架构持续升级和演进。本议题将集中介绍RocketMQ 5.0核心的云原生技术架构升级以及重大技术功能的原理剖析，帮助开发者更好的应用新特性来解决开发过程中的痛点问题。</div>
+                                        <div class="tag-wrapper">
+                                            <div class="num-item view-num" >470</div>
+                                            <div class="num-item download-num">262</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-ebook-pagination"></div>
+                    </div>
+                </div>
+
+
+                <div class="left-item ebook-copy-right-wrapper">
+                    <div class="left-item-title">版权信息</div>
+                    <div class="left-copy-right">
+                        <div class="article-copyright">
+                            <p class="article-copyright-info">
+                                <b>版权声明：</b><span>本文内容由阿里云实名注册用户自发贡献，版权归原作者所有，阿里云开发者社区不拥有其著作权，亦不承担相应法律责任。具体规则请查看《<a style="color:#ff6a00" target="_blank" href="https://developer.aliyun.com/article/768092">阿里云开发者社区用户服务协议</a>》和《<a style="color:#ff6a00" target="_blank" href="https://developer.aliyun.com/article/768093">阿里云开发者社区知识产权保护指引</a>》。如果您发现本社区中有涉嫌抄袭的内容，填写<a target="_blank" style="color:#ff6a00" href="https://yida.alibaba-inc.com/o/right">侵权投诉表单</a>进行举报，一经查实，本社区将立刻删除涉嫌侵权内容。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ebook-right-wrapper">
+                <div class="right-item-box community-box">
+                    <div class="community-name">
+                        <a target="_blank" href="/ecs/">弹性计算</a>
+                    </div>
+
+                    <div class="community-opr">
+                        <a class="community-title" target="_blank" href="/group/ecs/">云服务器ECS</a>
+
+                        <div class="community-follow-btn">
+                            +关注
+                        </div>
+                    </div>
+                    <div class="community-desc">云服务器ECS是一种安全可靠、弹性可伸缩的IaaS级云计算服务。在这里你可以获取最新的ECS产品资讯、最前沿的技术交流以及优惠活动等信息，加速自己的技术成长。</div>
+
+                </div>
+                <div class="right-item-box talk-box">
+                    <div class="right-item-title">
+                        <div class="right-item-title-text active">热门文章</div>
+                        <div class="right-item-title-text">热门讨论</div>
+                    </div>
+
+                    <div class="talk-box">
+                        <div class="talk-box-wrapper active">
+                            <div class="talk-list">
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/269923">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">惊呼！阿里云云服务器ECS最低3折售卖啦</div>
+                                        <div class="talk-item-num">95761</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/72772">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">ECS控制台使用小贴士</div>
+                                        <div class="talk-item-num">52492</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/675718">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">ECS 支持 IPv6 啦，快来尝鲜吧~</div>
+                                        <div class="talk-item-num">29439</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/699777">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">ECS 系统盘支持一键扩容啦，无需更换系统盘</div>
+                                        <div class="talk-item-num">25690</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/578378">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">【降价信息】弹性计算好“任性”，ECS又降价了~</div>
+                                        <div class="talk-item-num">16612</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/272215">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">必读！教你一键迁移至阿里云</div>
+                                        <div class="talk-item-num">15551</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/71166">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">安全组设置内网互通的方法</div>
+                                        <div class="talk-item-num">15779</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/92050">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">ECS 8080端口连接拒绝问题排查</div>
+                                        <div class="talk-item-num">14777</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/603740">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">扫盲人工智能的计算力基石--异构计算</div>
+                                        <div class="talk-item-num">12493</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item article" href="https://developer.aliyun.com/article/689396">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">Mac神兵利器（四）时间管理工具</div>
+                                        <div class="talk-item-num">17076</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="talk-more">
+                                <span>展开全部</span>
+                            </div>
+                        </div>
+                        <div class="talk-box-wrapper">
+                            <div class="talk-list article">
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/539196">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">阿里云新人用户有多少优惠</div>
+                                        <div class="talk-item-num">681</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/515920">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">ECS如何免费续费？6个月的。</div>
+                                        <div class="talk-item-num">904</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/526261">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">跟着“阿众”用ECS搭建导航网站</div>
+                                        <div class="talk-item-num">1906</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/452385">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">在无影云桌面的手机端如何使用虚拟键盘的方向箭头键？</div>
+                                        <div class="talk-item-num">3655</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/540505">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">阿里云ECS镜像的使用，我想吐槽/建议/鼓励一下</div>
+                                        <div class="talk-item-num">1078</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/554009">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">云服务器ECS我同一台服务器,被释放了5-6次了,为什么会那么频繁?</div>
+                                        <div class="talk-item-num">18</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/554013">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">云服务器ECS早上6：30-7：30调用弹性伸缩会Read timed out返回这个错误怎么解决？</div>
+                                        <div class="talk-item-num">18</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/314200">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">【百问百答】玩转ECS从入门到精通</div>
+                                        <div class="talk-item-num">12957</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/391016">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">导致大搜车中间件升级困难的原因是什么？</div>
+                                        <div class="talk-item-num">14015</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" class="talk-item" href="https://developer.aliyun.com/ask/417688">
+                                    <div class="talk-item-top">
+                                        <div class="talk-item-title">图形化界面</div>
+                                        <div class="talk-item-num">7366</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="talk-more">
+                                <span>展开全部</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right-item-box group-box">
+                    <div class="group-content">
+                        <div class="group-box-left">
+                            <div class="group-box-left-info">
+                                <a target="_blank" class="group-box-left-info-img-link" href="/group/ecs">
+                                    <img class="group-box-left-info-img" src="https://ucc.alicdn.com/pic/developer-ecology/deb854392bbf476e9954070829470859.png" />
+                                </a>
+                                <a target="_blank" class="group-box-left-info-title" href="/group/ecs">云服务器ECS</a>
+                                <div class="group-box-left-info-member">418191</div>
+                            </div>
+                            <div class="group-box-left-desc"></div>
+                        </div>
+                        <div class="group-box-right">
+                            <div data-group-code="ecs" data-join="false" class="group-join-btn">+ 订阅</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-item-box other-book">
+                    <div class="other-book-title">其他技术作品</div>
+                    <div class="other-book-wrapper">
+                        <div class="other-book-box">
+                            <a target="_blank" class="other-img" href="/ebook/8041">
+                                <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/qdgeq3zdgmebe_1277dc8ab0a54b65891b2914e5428d6c.jpg?x-oss-process=image/resize,h_300" />
+                                <div class="end-book">已完结</div>
+                            </a>
+                            <div class="ebook-right-content-wrapper">
+                                <a target="_blank" class="ebook-right-title" href="/ebook/8041">ECS技术实战指南</a>
+                                <div class="score-action">
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 96.0%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="score-num">9.6</span>
+                                </div>
+                                <div class="tag-wrapper">
+                                    <div class="num-item view-num">285537</div>
+                                    <div class="num-item download-num">259</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-book-box">
+                            <a target="_blank" class="other-img" href="/ebook/8014">
+                                <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/lsbvoac2jcmjc_84fa5ca609b641f6b09556f636b44503.jpg?x-oss-process=image/resize,h_300" />
+                                <div class="end-book">已完结</div>
+                            </a>
+                            <div class="ebook-right-content-wrapper">
+                                <a target="_blank" class="ebook-right-title" href="/ebook/8014">玩转AIGC</a>
+                                <div class="score-action">
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 93.0%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="score-num">9.3</span>
+                                </div>
+                                <div class="tag-wrapper">
+                                    <div class="num-item view-num">130827</div>
+                                    <div class="num-item download-num">944</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-book-box">
+                            <a target="_blank" class="other-img" href="/ebook/7977">
+                                <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/qdgeq3zdgmebe_9b816122c89347ad9e1a39188af51aca.jpg?x-oss-process=image/resize,h_300" />
+                                <div class="end-book">已完结</div>
+                            </a>
+                            <div class="ebook-right-content-wrapper">
+                                <a target="_blank" class="ebook-right-title" href="/ebook/7977">阿里云计算巢加速器：让优秀的软件生于云、长于云</a>
+                                <div class="score-action">
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 98.0%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="score-num">9.8</span>
+                                </div>
+                                <div class="tag-wrapper">
+                                    <div class="num-item view-num">203524</div>
+                                    <div class="num-item download-num">2314</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-book-box">
+                            <a target="_blank" class="other-img" href="/ebook/7924">
+                                <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/qdgeq3zdgmebe_26cb880a17934dcf9eece6e06191031a.jpg?x-oss-process=image/resize,h_300" />
+                                <div class="end-book">已完结</div>
+                            </a>
+                            <div class="ebook-right-content-wrapper">
+                                <a target="_blank" class="ebook-right-title" href="/ebook/7924">ECS成熟度评估&amp;洞察</a>
+                                <div class="score-action">
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 97.0%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="score-num">9.7</span>
+                                </div>
+                                <div class="tag-wrapper">
+                                    <div class="num-item view-num">16346</div>
+                                    <div class="num-item download-num">203</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="other-book-box">
+                            <a target="_blank" class="other-img" href="/ebook/7911">
+                                <img class="ebook-img" src="https://ucc.alicdn.com/pic/developer-ecology/qdgeq3zdgmebe_2129ce1c938f4b7e94fc404cff750457.jpg?x-oss-process=image/resize,h_300" />
+                                <div class="end-book">已完结</div>
+                            </a>
+                            <div class="ebook-right-content-wrapper">
+                                <a target="_blank" class="ebook-right-title" href="/ebook/7911">CloudOps 云上自动化运维白皮书 2.0</a>
+                                <div class="score-action">
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 98.0%;"></div>
+                                        </div>
+                                    </div>
+                                    <span class="score-num">9.8</span>
+                                </div>
+                                <div class="tag-wrapper">
+                                    <div class="num-item view-num">546645</div>
+                                    <div class="num-item download-num">3882</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-item-box rank-box">
+                    <div class="rank-box-top">排行榜</div>
+                    <div class="rank-box-tab-list">
+
+                        <div class="rank-box-tab-item active">总阅读榜</div>
+
+                        <div class="rank-box-tab-item">总下载榜</div>
+                    </div>
+                    <div class="rank-box-container">
+                        <!--阅读月榜 -->
+
+                        <!--阅读总榜 -->
+                        <div class="rank-box-list active">
+                            <a target="_blank" class="rank-box-item" href="/ebook/7445">
+                                <div class="rank-box-item-left">1</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/2eba59880a0142f78fed0dfbc2ddf6b5.jpg?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">4天实战 轻松玩转docker</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 94.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.4</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">2475567</div>
+                                        <div class="ebook-home-download">22731</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/37">
+                                <div class="rank-box-item-left">2</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/0cdfa3d2f9f04ca98e9559c22de70476.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">思维的边界：认知智能</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 94.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.4</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">1290499</div>
+                                        <div class="ebook-home-download">11047</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/19">
+                                <div class="rank-box-item-left">3</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/2d684871c7a64c979a123ecd811680cc.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">科技与人：元宇宙论坛跨界对话</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 93.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.3</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">688251</div>
+                                        <div class="ebook-home-download">4922</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/7911">
+                                <div class="rank-box-item-left">4</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/qdgeq3zdgmebe_2129ce1c938f4b7e94fc404cff750457.jpg?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">CloudOps 云上自动化运维白皮书 2.0</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 98.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.8</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">546645</div>
+                                        <div class="ebook-home-download">3882</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/394">
+                                <div class="rank-box-item-left">5</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/e9c800160ca6488384d32d9dc6336bd4.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">Java开发手册（嵩山版）</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 95.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.5</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">545616</div>
+                                        <div class="ebook-home-download">119825</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/330">
+                                <div class="rank-box-item-left">6</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/2aafe7bac78a4168ac4825ef2cd61e79.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">Java开发手册（泰山版）</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 98.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.8</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">502218</div>
+                                        <div class="ebook-home-download">97862</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/395">
+                                <div class="rank-box-item-left">7</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/94e15c5c2f3e4c8b8a3e5aa939dfc1aa.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">Java工程师成神之路</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 93.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.3</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">399766</div>
+                                        <div class="ebook-home-download">92366</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/7847">
+                                <div class="rank-box-item-left">8</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/ec4ad6fa13c94c16b40a0c0e47ba175f.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">必致（BizDevOps）白皮书2022</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 97.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.7</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">340305</div>
+                                        <div class="ebook-home-download">4924</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/8">
+                                <div class="rank-box-item-left">9</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/fe2c3d61c1fb4fd8b90a455b30db167f.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">Elasticsearch全观测技术解析与应用（构建日志、指标、APM统一观测平台）</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 95.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.5</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">309105</div>
+                                        <div class="ebook-home-download">9598</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/8041">
+                                <div class="rank-box-item-left">10</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/qdgeq3zdgmebe_1277dc8ab0a54b65891b2914e5428d6c.jpg?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">ECS技术实战指南</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 96.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.6</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">285537</div>
+                                        <div class="ebook-home-download">259</div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <!--下载月榜 -->
+
+                        <!--下载总榜-->
+                        <div class="rank-box-list">
+                            <a target="_blank" class="rank-box-item" href="/ebook/394">
+                                <div class="rank-box-item-left">1</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/e9c800160ca6488384d32d9dc6336bd4.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">Java开发手册（嵩山版）</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 95.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.5</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">545616</div>
+                                        <div class="ebook-home-download">119825</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/330">
+                                <div class="rank-box-item-left">2</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/2aafe7bac78a4168ac4825ef2cd61e79.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">Java开发手册（泰山版）</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 98.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.8</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">502218</div>
+                                        <div class="ebook-home-download">97862</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/395">
+                                <div class="rank-box-item-left">3</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/94e15c5c2f3e4c8b8a3e5aa939dfc1aa.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">Java工程师成神之路</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 93.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.3</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">399766</div>
+                                        <div class="ebook-home-download">92366</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/36">
+                                <div class="rank-box-item-left">4</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/b098957692a04934b712942f720df164.jpg?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">Nacos架构&amp;原理</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 94.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.4</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">174276</div>
+                                        <div class="ebook-home-download">48018</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/342">
+                                <div class="rank-box-item-left">5</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/7be3be965c794d4db5f8b8992637af0c.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">深入浅出Kubernetes </div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 95.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.5</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">161859</div>
+                                        <div class="ebook-home-download">38702</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/338">
+                                <div class="rank-box-item-left">6</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/c867dd1127d2417bae3067f8e2b96d22.jpg?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">程序员面试宝典</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 96.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.6</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">196407</div>
+                                        <div class="ebook-home-download">38612</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/450">
+                                <div class="rank-box-item-left">7</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/4367e920470043daa32df38b93eb266b.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">深入MySQL实战</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 98.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.8</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">128474</div>
+                                        <div class="ebook-home-download">33957</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/440">
+                                <div class="rank-box-item-left">8</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/bc5b7bc1449842cda82da18aaee08614.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">云原生架构白皮书 2022版</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 97.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.7</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">130123</div>
+                                        <div class="ebook-home-download">31200</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/7565">
+                                <div class="rank-box-item-left">9</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/8927e096d13b4cba91c75105da14967a.jpg?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">微服务治理技术白皮书</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 94.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.4</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">174940</div>
+                                        <div class="ebook-home-download">29810</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a target="_blank" class="rank-box-item" href="/ebook/417">
+                                <div class="rank-box-item-left">10</div>
+                                <div class="rank-box-item-center ebook-finish">
+                                    <img class="rank-box-item-img" src="https://ucc.alicdn.com/pic/developer-ecology/b70fc32c5a1448ed9b2004a77fb64c5d.png?x-oss-process=image/resize,h_300" alt="" />
+                                </div>
+                                <div class="rank-box-item-right">
+                                    <div class="rank-box-item-title">零基础入门：从0到1学会 Apache Flink</div>
+                                    <div class="ebook-home-stars">
+                                        <div class="ebook-def-star">
+                                            <div class="ebook-cur-star" style="width: 93.0%;"></div>
+                                        </div>
+                                        <div class="ebook-star-count">9.3</div>
+                                    </div>
+                                    <div class="ebook-home-info">
+                                        <div class="ebook-home-view">128840</div>
+                                        <div class="ebook-home-download">28264</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-item-box recommend-box" data-tracker-container="developer_ebook_related_article">
+                    <div class="right-item-title">
+                        <div class="right-item-title-text">推荐文章</div>
+                    </div>
+                    <div class="recommend-list">
+                        <div class="recommend-main">
+                            <a target="_blank" data-tracker-scm="20140722.ID_community@@article@@1326791._.ID_community@@article@@1326791-OR_rec-V_1-RL_community@@ebook@@1" class="recommend-item"  href="https://developer.aliyun.com/article/1326791">
+                                Vue高级与前端项 目架构 1
+                            </a>
+                            <a target="_blank" data-tracker-scm="20140722.ID_community@@article@@1324779._.ID_community@@article@@1324779-OR_rec-V_1-RL_community@@ebook@@1" class="recommend-item"  href="https://developer.aliyun.com/article/1324779">
+                                .net core依赖注入：良好架构的起点
+                            </a>
+                            <a target="_blank" data-tracker-scm="20140722.ID_community@@article@@1313572._.ID_community@@article@@1313572-OR_rec-V_1-RL_community@@ebook@@1" class="recommend-item"  href="https://developer.aliyun.com/article/1313572">
+                                腾讯云高级架构考试内容是什么？考试费用是多少？
+                            </a>
+                            <a target="_blank" data-tracker-scm="20140722.ID_community@@article@@1312085._.ID_community@@article@@1312085-OR_rec-V_1-RL_community@@ebook@@1" class="recommend-item"  href="https://developer.aliyun.com/article/1312085">
+                                第03章 用户和权限管理【1.MySQL架构篇】【MySQL高级】1
+                            </a>
+                            <a target="_blank" data-tracker-scm="20140722.ID_community@@article@@1312118._.ID_community@@article@@1312118-OR_rec-V_1-RL_community@@ebook@@1" class="recommend-item"  href="https://developer.aliyun.com/article/1312118">
+                                第03章 用户和权限管理【1.MySQL架构篇】【MySQL高级】2
+                            </a>
+                            <a target="_blank" data-tracker-scm="20140722.ID_community@@article@@1312138._.ID_community@@article@@1312138-OR_rec-V_1-RL_community@@ebook@@1" class="recommend-item"  href="https://developer.aliyun.com/article/1312138">
+                                第03章 用户和权限管理【1.MySQL架构篇】【MySQL高级】3
+                            </a>
+                            <a target="_blank" data-tracker-scm="20140722.ID_community@@article@@1312141._.ID_community@@article@@1312141-OR_rec-V_1-RL_community@@ebook@@1" class="recommend-item"  href="https://developer.aliyun.com/article/1312141">
+                                第03章 用户和权限管理【1.MySQL架构篇】【MySQL高级】4
+                            </a>
+                            <a target="_blank" data-tracker-scm="20140722.ID_community@@article@@1312145._.ID_community@@article@@1312145-OR_rec-V_1-RL_community@@ebook@@1" class="recommend-item"  href="https://developer.aliyun.com/article/1312145">
+                                第04章 逻辑架构【1.MySQL架构篇】【MySQL高级】1
+                            </a>
+                        </div>
+                    </div>
+                    <div class="recommend-pagination ">
+                        <span class="recommend-click-item actives"> </span>
+                        <span class="recommend-click-item"> </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="//alinw.alicdn.com/platform/c/jquery/1.11.3/dist/jquery.min.js" nonce="7f80fa0aafc44113b8cfbb31c71a6195"></script>
+<div data-role-footer="default"></div>
+
+<script type="text/javascript" nonce="7f80fa0aafc44113b8cfbb31c71a6195" src="https://g.alicdn.com/code/npm/@ali/??biu-loader/0.1.0/index.js,hmod-preact/0.0.1/index.js,hmod-preact-hooks/0.0.1/index.js,hmod-preact-compat/0.0.1/index.js,hmod-preact-bridge/0.1.0/index.js,hmod-ace-service-loader/0.1.1/index.js"></script>
+<script type="text/javascript" nonce="7f80fa0aafc44113b8cfbb31c71a6195" src="https://g.alicdn.com/code/npm/@ali??hmod-ace-2023-box/0.1.0/index.js,hmod-ace-2023-developer-global-community-nav/0.0.37/index.js,hmod-ace-2023-developer-global-feedback/0.0.4/index.js,hmod-ace-2023-developer-global-guide/0.0.14/index.js,hmod-aliyun-com-global-nav-search/0.0.19/index.js,hmod-aliyun-com-global-nav/0.0.25/index.js,hmod-lowcode-normal-page/0.0.1/index.js"></script>
+<script type="text/javascript" nonce="7f80fa0aafc44113b8cfbb31c71a6195" src="https://g.alicdn.com/aliyun-com/lowcode-engine/0.1.12/renderer/build/js/index.js"></script>
+<script type="text/javascript" nonce="7f80fa0aafc44113b8cfbb31c71a6195" src="https://cloud-assets.alicdn.com/lowcode/entry/prod/004afe5213fdc1a98b96333bfaf650ba.js"></script>
+
+
+<script type="text/javascript" src="//g.alicdn.com/developer_center/developer-fresh-aliyun-com-fe/0.7.41/??react.js,react-dom.js" nonce="7f80fa0aafc44113b8cfbb31c71a6195"></script>
+
+<script type="text/javascript" src="//g.alicdn.com/aliyun/util/1.2.36/loader.js" nonce="7f80fa0aafc44113b8cfbb31c71a6195"></script>
+
+<script defer="defer" type="text/javascript" src="//g.alicdn.com/dawn/assets-loader/scripts/fast-login.js?tenantName=website" nonce="7f80fa0aafc44113b8cfbb31c71a6195"></script>
+
+<script defer="defer" src="//g.alicdn.com/aliyun/perf/js/index.js" nonce="7f80fa0aafc44113b8cfbb31c71a6195"></script>
+<script nonce="7f80fa0aafc44113b8cfbb31c71a6195">
+    /*<![CDATA[*/
+    $(document).ready(function(){
+        window.ALIYUN_PERF.reportPerfWhenStatic();
+    });
+    (function () {
+        let host = window.location.hostname;
+        if (
+            !host.endsWith('.aliyun.com') &&
+            !host.endsWith('.aliyun.test') &&
+            !host.startsWith('127.0.0.1') &&
+            !host.startsWith('localhost')
+        ) {
+            window.location.href = '//developer.aliyun.com';
+        }
+    })();
+    /*]]>*/
+</script>
+
+<div id="ebook-clouddashi"></div>
+</body>
+
+
+
+<script type="text/javascript" nonce="7f80fa0aafc44113b8cfbb31c71a6195" src="//g.alicdn.com/aliyun/ucc-component-fe/0.2.33/??actionButtons.js"></script>
+<script type="text/javascript" nonce="7f80fa0aafc44113b8cfbb31c71a6195" src="//g.alicdn.com/developer_center/devcloud-aliyun-com-fe/0.8.26/scripts/ebookDetail.js"></script>
+
+<script type="text/javascript" src="//oneconsole.alicdn.com/sitemap/js/scm_v2.js" nonce="7f80fa0aafc44113b8cfbb31c71a6195"></script>
+
+</html>
