@@ -1,17 +1,17 @@
 # Ebook-Spider
 
 #### 介绍
-阿里云藏经阁书籍爬虫，基于goquery ,gocsv 实现
+阿里云藏经阁书籍爬虫，基于goquery获取html解析图书信息，将图书信息写入csv文件
 
 #### 软件架构
-软件架构说明
+**依赖** 
 
-
+    github.com/PuerkitoBio/goquery 
+    github.com/gocarina/gocsv
+    
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  go get https://gitee.com/yiyingxuan/Ebook-Spider.git
 
 #### 使用说明
 
