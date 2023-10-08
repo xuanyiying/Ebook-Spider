@@ -4,16 +4,17 @@ import (
 	"bufio"
 	"ebook-spider/logger"
 	"fmt"
+	"io"
+	"net/http"
+	"time"
+
 	"golang.org/x/net/html/charset"
 	"golang.org/x/text/encoding"
 	"golang.org/x/text/encoding/unicode"
 	"golang.org/x/text/transform"
-	"io"
-	"net/http"
-	"time"
 )
 
-var rateLimiter = time.Tick(time.Second)
+var rateLimiter = time.Tick(time.Nanosecond)
 
 func Fetch(url string) ([]byte, error) {
 	<-rateLimiter

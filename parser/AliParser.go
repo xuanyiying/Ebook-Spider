@@ -10,8 +10,10 @@ import (
 	"encoding/base64"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
+	"sort"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type AliParser struct {
@@ -59,7 +61,7 @@ func (a *AliParser) Parse(content []byte, id int8) model.BookInfo {
 
 func Run() {
 	var books []model.BookInfo
-	for i := 1; i < 8051; i++ {
+	for i := 8054; i <= 10000 && i >= 0; i-- {
 		books = parse(i, books)
 	}
 	s := store.CsvStore{}
@@ -79,6 +81,12 @@ func parse(i int, books []model.BookInfo) []model.BookInfo {
 	}
 	a := AliParser{}
 	book := a.Parse(bytes, int8(i))
+	book.Url = uri
 	books = append(books, book)
+	sort.Slice(books, func(i, j int) bool {
+		t1, _ := time.Parse("2006-01-02", books[i].PublishTime)
+		t2, _ := time.Parse("2006-01-02", books[i].PublishTime)
+		return t1.Before(t2)
+	})
 	return books
 }

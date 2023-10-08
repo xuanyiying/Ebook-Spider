@@ -11,4 +11,5 @@ type BookInfo struct {
 	Stars       float64 `csv:"星"`
 	ImgUrl      string  `csv:"图片"`
 	ImgBytes    string  `csv:"图片base64数据"`
+	Url         string  `csv:"url"`
 }
