@@ -2,7 +2,6 @@ package parser
 
 import (
 	"ebook-spider/consts"
-	"ebook-spider/fetcher"
 	"ebook-spider/logger"
 	"ebook-spider/model"
 	"ebook-spider/store"
@@ -10,6 +9,7 @@ import (
 	"encoding/base64"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
+	fetcher "github.com/xuanyiying/fetcher"
 	"sort"
 	"strconv"
 	"strings"
@@ -75,7 +75,7 @@ func Run() {
 func parse(i int, books []model.BookInfo) []model.BookInfo {
 	uri := fmt.Sprintf(consts.AliyunUrl, i)
 	logger.Info("url", uri)
-	bytes, err := fetcher.Fetch(uri)
+	bytes, err := fetcher.FetchWithRateLimiter(uri, time.Tick(time.Second))
 	if err != nil {
 		logger.Error("错误url:", uri, err)
 	}
